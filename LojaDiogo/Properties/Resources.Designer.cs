@@ -113,6 +113,16 @@ namespace LojaDiogo.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _16481730421594722074_1281 {
+            get {
+                object obj = ResourceManager.GetObject("16481730421594722074-1281", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _17115838791536572526_48 {
             get {
                 object obj = ResourceManager.GetObject("17115838791536572526-48", resourceCulture);

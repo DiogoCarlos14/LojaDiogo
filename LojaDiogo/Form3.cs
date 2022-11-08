@@ -21,5 +21,39 @@ namespace LojaDiogo
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string Password = "nota20";
+
+            if (textBox2.Text == Password)
+            {
+                Form1.utilizador = textBox1.Text;
+                Form1 pobjForm = (Form1)this.MdiParent;
+                pobjForm.MostrarLogin(Form1.utilizador);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Nome de Utilizador ou password incorreta!");
+
+            }
+
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

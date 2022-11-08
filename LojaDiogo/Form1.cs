@@ -12,20 +12,44 @@ namespace LojaDiogo
 {
     public partial class Form1 : Form
     {
+        public static string utilizador = null;
         public Form1()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
         }
 
+        public void MostrarLogin(string u)
+        {
+            if (u != null)
+            {
+                loginToolStripMenuItem.Text = utilizador;
+            }
+            else
+            {
+                loginToolStripMenuItem.Text = "Login";
+            }
+            
+        }
 
-       //LOGIN
+        //LOGIN
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form3 f3 = new Form3();
             f3.MdiParent = this;
             f3.Show();
             f3.Dock = DockStyle.Fill;
+
+            if(loginToolStripMenuItem.Text != "Login")
+            {
+                f3.Close();
+                MessageBox.Show("Ja esta com login");
+                //---------------------------------------------
+                Form4 f4 = new Form4();
+                f4.MdiParent = this;
+                f4.Show();
+                f4.Dock = DockStyle.Fill;
+            }
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
