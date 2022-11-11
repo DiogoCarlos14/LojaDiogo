@@ -4,9 +4,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace LojaDiogo
 {
@@ -19,18 +23,31 @@ namespace LojaDiogo
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            CenterOfMenuPane();
-            label1.Text = Form1.utilizador;
-
+            textBox1.Text = Form1.utilizador;
         }
-        private Point CenterOfMenuPanel<T>(T control, int height = 0) where T : Control
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            Point center = new Point(
-                label1.Size.Width / 2 - control.Width * 2,
-                height != 0 ? height : label1.Size.Height / 2 - control.Height / 2);
 
-            return center;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string nomelogin = "Login";
+            Form1.utilizador = nomelogin;
+            Form1 pobjForm = (Form1)this.MdiParent;
+            pobjForm.MostrarLogin(Form1.utilizador);
+            this.Close();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+ 
+        }
     }
 }

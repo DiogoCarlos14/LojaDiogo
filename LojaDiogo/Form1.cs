@@ -13,6 +13,7 @@ namespace LojaDiogo
     public partial class Form1 : Form
     {
         public static string utilizador = null;
+
         public Form1()
         {
             InitializeComponent();
@@ -43,7 +44,7 @@ namespace LojaDiogo
             if(loginToolStripMenuItem.Text != "Login")
             {
                 f3.Close();
-                MessageBox.Show("Ja esta com login");
+                //MessageBox.Show("Ja esta com login");
                 //---------------------------------------------
                 Form4 f4 = new Form4();
                 f4.MdiParent = this;
@@ -57,9 +58,31 @@ namespace LojaDiogo
           
         }
 
+        private void desativarButtons()
+        {
+            ficheiroToolStripMenuItem.Enabled = false;
+            produtosToolStripMenuItem.Enabled = false;
+            vendasToolStripMenuItem.Enabled = false;
+            reparaçõesToolStripMenuItem.Enabled = false;
+
+            toolStrip1.Enabled = false;
+        }
+
+        private void ativarButtons()
+        {
+            ficheiroToolStripMenuItem.Enabled = true;
+            produtosToolStripMenuItem.Enabled = true;
+            vendasToolStripMenuItem.Enabled = true;
+            reparaçõesToolStripMenuItem.Enabled = true;
+
+            toolStrip1.Enabled = true;
+        }
+
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            desativarButtons();
         }
 
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,6 +93,17 @@ namespace LojaDiogo
             f2.Dock = DockStyle.Fill;
         }
 
+        private void loginToolStripMenuItem_TextChanged(object sender, EventArgs e)
+        {
+            if(loginToolStripMenuItem.Text != "Login")
+            {
+                ativarButtons();
+            }
+        }
 
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

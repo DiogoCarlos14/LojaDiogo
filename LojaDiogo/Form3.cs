@@ -42,6 +42,7 @@ namespace LojaDiogo
                 Form1 pobjForm = (Form1)this.MdiParent;
                 pobjForm.MostrarLogin(Form1.utilizador);
                 this.Close();
+                //------------------
             }
             else
             {

@@ -31,22 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ficheiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.guardarComoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.xToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
-            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
+            this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.xToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
+            this.sairToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xToolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.apagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xToolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.xToolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,13 +54,13 @@
             this.reparaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registoDeAvariasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaGeralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // ficheiroToolStripMenuItem
             // 
@@ -95,6 +96,18 @@
             this.ficheiroToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.ficheiroToolStripMenuItem.Text = "Ficheiro";
             // 
+            // abrirToolStripMenuItem
+            // 
+            this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
+            this.abrirToolStripMenuItem.Text = "Abrir";
+            this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
+            // 
+            // guardarToolStripMenuItem
+            // 
+            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(175, 6);
+            // 
             // guardarComoToolStripMenuItem
             // 
             this.guardarComoToolStripMenuItem.Name = "guardarComoToolStripMenuItem";
@@ -107,12 +120,10 @@
             this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
             this.imprimirToolStripMenuItem.Text = "Guardar Como...";
             // 
-            // abrirToolStripMenuItem
+            // sairToolStripMenuItem
             // 
-            this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
-            this.abrirToolStripMenuItem.Text = "Abrir";
-            this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(175, 6);
             // 
             // sairToolStripMenuItem1
             // 
@@ -120,26 +131,16 @@
             this.sairToolStripMenuItem1.Size = new System.Drawing.Size(178, 24);
             this.sairToolStripMenuItem1.Text = "Imprimir";
             // 
-            // sairToolStripMenuItem2
-            // 
-            this.sairToolStripMenuItem2.Name = "sairToolStripMenuItem2";
-            this.sairToolStripMenuItem2.Size = new System.Drawing.Size(178, 24);
-            this.sairToolStripMenuItem2.Text = "Sair";
-            // 
             // xToolStripMenuItem
             // 
             this.xToolStripMenuItem.Name = "xToolStripMenuItem";
             this.xToolStripMenuItem.Size = new System.Drawing.Size(175, 6);
             // 
-            // sairToolStripMenuItem
+            // sairToolStripMenuItem2
             // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(175, 6);
-            // 
-            // guardarToolStripMenuItem
-            // 
-            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(175, 6);
+            this.sairToolStripMenuItem2.Name = "sairToolStripMenuItem2";
+            this.sairToolStripMenuItem2.Size = new System.Drawing.Size(178, 24);
+            this.sairToolStripMenuItem2.Text = "Sair";
             // 
             // produtosToolStripMenuItem
             // 
@@ -161,6 +162,11 @@
             this.listagemToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.listagemToolStripMenuItem.Text = "Listagem";
             // 
+            // xToolStripMenuItem1
+            // 
+            this.xToolStripMenuItem1.Name = "xToolStripMenuItem1";
+            this.xToolStripMenuItem1.Size = new System.Drawing.Size(140, 6);
+            // 
             // novoToolStripMenuItem
             // 
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
@@ -179,21 +185,16 @@
             this.apagarToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.apagarToolStripMenuItem.Text = "Apagar";
             // 
+            // xToolStripMenuItem2
+            // 
+            this.xToolStripMenuItem2.Name = "xToolStripMenuItem2";
+            this.xToolStripMenuItem2.Size = new System.Drawing.Size(140, 6);
+            // 
             // categoriasToolStripMenuItem
             // 
             this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
             this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.categoriasToolStripMenuItem.Text = "Categorias";
-            // 
-            // xToolStripMenuItem1
-            // 
-            this.xToolStripMenuItem1.Name = "xToolStripMenuItem1";
-            this.xToolStripMenuItem1.Size = new System.Drawing.Size(140, 6);
-            // 
-            // xToolStripMenuItem2
-            // 
-            this.xToolStripMenuItem2.Name = "xToolStripMenuItem2";
-            this.xToolStripMenuItem2.Size = new System.Drawing.Size(140, 6);
             // 
             // vendasToolStripMenuItem
             // 
@@ -243,6 +244,17 @@
             this.consultaGeralToolStripMenuItem.Name = "consultaGeralToolStripMenuItem";
             this.consultaGeralToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.consultaGeralToolStripMenuItem.Text = "Consulta Geral";
+            // 
+            // loginToolStripMenuItem
+            // 
+            this.loginToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.loginToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.loginToolStripMenuItem.Image = global::LojaDiogo.Properties.Resources._16481730421594722074_128;
+            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.loginToolStripMenuItem.Text = "Login";
+            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
+            this.loginToolStripMenuItem.TextChanged += new System.EventHandler(this.loginToolStripMenuItem_TextChanged);
             // 
             // toolStrip1
             // 
@@ -306,16 +318,6 @@
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(74, 74);
             this.toolStripButton5.Text = "toolStripButton5";
-            // 
-            // loginToolStripMenuItem
-            // 
-            this.loginToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.loginToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.loginToolStripMenuItem.Image = global::LojaDiogo.Properties.Resources._16481730421594722074_128;
-            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
-            this.loginToolStripMenuItem.Text = "Login";
-            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
             // Form1
             // 
