@@ -38,6 +38,9 @@ namespace LojaDiogo
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Form1 f = new Form1();
+            f.desativarButtons();
+     
             string nomelogin = "Login";
             Form1.utilizador = nomelogin;
             Form1 pobjForm = (Form1)this.MdiParent;
