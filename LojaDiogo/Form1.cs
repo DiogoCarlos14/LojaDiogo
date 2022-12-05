@@ -31,6 +31,7 @@ namespace LojaDiogo
         }
 
         //-----------------------------------------------------------------------------------------------------
+       /*
         public class Taskbar
         {
             [DllImport("user32.dll")]
@@ -69,8 +70,8 @@ namespace LojaDiogo
 
             public static void ShowTask()
             {
-                ShowWindow(Handle, SW_SHOW);
-                ShowWindow(HandleOfStartButton, SW_SHOW);
+               ShowWindow(Handle, SW_SHOW);
+               ShowWindow(HandleOfStartButton, SW_SHOW);
             }
             public static void HideTask()
             {
@@ -79,7 +80,7 @@ namespace LojaDiogo
             }
         }
 
-
+        */
             //-----------------------------------------------------------------------------------------------------
 
             public void MostrarLogin(string u)
@@ -117,7 +118,10 @@ namespace LojaDiogo
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-    
+                Form2 f2 = new Form2();
+                f2.MdiParent = this;
+                f2.Show();
+                f2.Dock = DockStyle.Fill;
         }
 
         private void ativarButtons()
@@ -135,7 +139,7 @@ namespace LojaDiogo
         private void Form1_Load(object sender, EventArgs e)
         {
             this.TopMost = true;
-            this.FormBorderStyle = FormBorderStyle.None;
+            //this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             desativarButtons();
         }
