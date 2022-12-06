@@ -30,11 +30,6 @@
         {
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,6 +40,11 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusMgs = new System.Windows.Forms.ToolStripStatusLabel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(589, 454);
             this.listBox1.TabIndex = 5;
+            this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
             // label1
             // 
@@ -67,63 +68,6 @@
             this.label1.Size = new System.Drawing.Size(126, 31);
             this.label1.TabIndex = 6;
             this.label1.Text = "Carrinho:";
-            // 
-            // button5
-            // 
-            this.button5.Image = global::LojaDiogo.Properties.Resources._18769148821543238916_48;
-            this.button5.Location = new System.Drawing.Point(1061, 551);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(313, 90);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Guardar e Sair";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Image = global::LojaDiogo.Properties.Resources._17115838791536572526_48;
-            this.button4.Location = new System.Drawing.Point(644, 551);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(170, 90);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Eliminar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Image = global::LojaDiogo.Properties.Resources._109625862716276583143772_48;
-            this.button3.Location = new System.Drawing.Point(438, 551);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(173, 90);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Cancelar";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Image = global::LojaDiogo.Properties.Resources._14269300821582779200_48;
-            this.button2.Location = new System.Drawing.Point(235, 551);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(167, 90);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Atualizar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::LojaDiogo.Properties.Resources._303221911558424386_48;
-            this.button1.Location = new System.Drawing.Point(30, 551);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 90);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Novo";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -191,8 +135,13 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Hardware ",
+            "Software"});
             this.comboBox1.Location = new System.Drawing.Point(189, 223);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(355, 33);
@@ -213,6 +162,65 @@
             this.statusMgs.Name = "statusMgs";
             this.statusMgs.Size = new System.Drawing.Size(0, 17);
             this.statusMgs.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            // 
+            // button5
+            // 
+            this.button5.Image = global::LojaDiogo.Properties.Resources._18769148821543238916_48;
+            this.button5.Location = new System.Drawing.Point(1061, 551);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(313, 90);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Guardar e Sair";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Image = global::LojaDiogo.Properties.Resources._17115838791536572526_48;
+            this.button4.Location = new System.Drawing.Point(644, 551);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(170, 90);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Eliminar";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Image = global::LojaDiogo.Properties.Resources._109625862716276583143772_48;
+            this.button3.Location = new System.Drawing.Point(438, 551);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(173, 90);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Cancelar";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Image = global::LojaDiogo.Properties.Resources._14269300821582779200_48;
+            this.button2.Location = new System.Drawing.Point(235, 551);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(167, 90);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Atualizar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Image = global::LojaDiogo.Properties.Resources._303221911558424386_48;
+            this.button1.Location = new System.Drawing.Point(30, 551);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(178, 90);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Novo";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form2
             // 

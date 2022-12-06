@@ -87,7 +87,7 @@ namespace LojaDiogo
                 }
 
                 //verificar se é uma descrição válida
-                if(textBox2.Text.Equals("") ||
+                if (textBox2.Text.Equals("") ||
                     textBox2.Text.Length < 3 ||
                     textBox2.Text.Length > 50)
                 {
@@ -96,13 +96,13 @@ namespace LojaDiogo
                 }
 
                 //verificar categoria
-                if(comboBox1.SelectedIndex == -1)
+                if (comboBox1.SelectedIndex == -1)
                 {
                     throw new Exception("Escolha uma categoria");
                 }
 
                 //verificar se preco é double 
-                if(!double.TryParse(textBox3.Text, out y))
+                if (!double.TryParse(textBox3.Text, out y))
                 {
                     textBox3.Focus();
                     throw new Exception("Insira um preco numerico.");
@@ -113,7 +113,7 @@ namespace LojaDiogo
                     throw new Exception("Insira em preco um valor superior a 0.");
                 }
 
-               
+
 
             }
 
@@ -129,6 +129,101 @@ namespace LojaDiogo
             listBox1.Items.Add(linha);
 
             statusMgs.Text = " Adicionado um novo produto. ";
+            Limpar();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Remove(listBox1.SelectedItem);
+        }
+
+        private int posLista = -1;
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            //ajustar
+            posLista = listBox1.SelectedIndex;
+            
+            //fazer o parse para um array
+            string[] campos = listBox1.SelectedItem.ToString().Split('|');
+
+            textBox1.Text = campos[0].Trim();
+            textBox2.Text = campos[1].Trim();
+
+            switch (campos[2].Trim())
+            {
+                case "Hardware": comboBox1.SelectedIndex = 0; break;
+                case "Software": comboBox1.SelectedIndex = 1; break;
+                    default: comboBox1.SelectedIndex = -1; break;
+            }
+
+            textBox3.Text = campos[3].Trim();
+            textBox1.Focus();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //verificar se os dados sao validos
+            int x;
+            double y;
+            try
+            {
+                //verificar se o codigo é inteiro
+                if (!int.TryParse(textBox1.Text, out x))
+                {
+                    textBox1.Focus();
+                    throw new Exception("Insira um código inteiro.");
+                }
+                else if (Convert.ToInt32(textBox1.Text) < 100)
+                {
+                    textBox1.Focus();
+                    throw new Exception("Insira um codigo com 3 ou mais digitos.");
+                }
+
+                //verificar se é uma descrição válida
+                if (textBox2.Text.Equals("") ||
+                    textBox2.Text.Length < 3 ||
+                    textBox2.Text.Length > 50)
+                {
+                    textBox2.Focus();
+                    throw new Exception("Insira a descrição do produto (3 a 50 chars).");
+                }
+
+                //verificar categoria
+                if (comboBox1.SelectedIndex == -1)
+                {
+                    throw new Exception("Escolha uma categoria");
+                }
+
+                //verificar se preco é double 
+                if (!double.TryParse(textBox3.Text, out y))
+                {
+                    textBox3.Focus();
+                    throw new Exception("Insira um preco numerico.");
+                }
+                else if (Convert.ToDouble(textBox3.Text) <= 0)
+                {
+                    textBox3.Focus();
+                    throw new Exception("Insira em preco um valor superior a 0.");
+                }
+
+
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string linha = textBox1.Text + " | " + textBox2.Text + " | " +
+                comboBox1.SelectedItem + " | " + textBox3.Text;
+
+            listBox1.Items.RemoveAt(posLista);
+            listBox1.Items.Insert(posLista, linha);
+            posLista = -1;
+
+            statusMgs.Text = "Atualizado com sucesso.";
             Limpar();
         }
     }

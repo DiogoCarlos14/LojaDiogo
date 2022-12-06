@@ -55,16 +55,16 @@
             this.reparaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registoDeAvariasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaGeralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -176,6 +176,7 @@
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
             this.novoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.novoToolStripMenuItem.Text = "Novo";
+            this.novoToolStripMenuItem.Click += new System.EventHandler(this.novoToolStripMenuItem_Click);
             // 
             // editarToolStripMenuItem
             // 
@@ -249,17 +250,6 @@
             this.consultaGeralToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.consultaGeralToolStripMenuItem.Text = "Consulta Geral";
             // 
-            // loginToolStripMenuItem
-            // 
-            this.loginToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.loginToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.loginToolStripMenuItem.Image = global::LojaDiogo.Properties.Resources._16481730421594722074_128;
-            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
-            this.loginToolStripMenuItem.Text = "Login";
-            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
-            this.loginToolStripMenuItem.TextChanged += new System.EventHandler(this.loginToolStripMenuItem_TextChanged);
-            // 
             // toolStrip1
             // 
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -276,6 +266,33 @@
             this.toolStrip1.Size = new System.Drawing.Size(800, 77);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Snow;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1333, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "sdasd";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(193, 243);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(250, 29);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Palavra Passe: nota20";
+            this.label2.Visible = false;
             // 
             // toolStripButton1
             // 
@@ -323,32 +340,16 @@
             this.toolStripButton5.Size = new System.Drawing.Size(74, 74);
             this.toolStripButton5.Text = "Definições";
             // 
-            // timer1
+            // loginToolStripMenuItem
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1333, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "sdasd";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(193, 243);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(237, 29);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Palavra Passe: nota2";
-            this.label2.Visible = false;
+            this.loginToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.loginToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.loginToolStripMenuItem.Image = global::LojaDiogo.Properties.Resources._16481730421594722074_128;
+            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.loginToolStripMenuItem.Text = "Login";
+            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
+            this.loginToolStripMenuItem.TextChanged += new System.EventHandler(this.loginToolStripMenuItem_TextChanged);
             // 
             // Form1
             // 
@@ -364,7 +365,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DiogoShop";
+            this.Text = "                                ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -146,10 +146,7 @@ namespace LojaDiogo
 
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
-            f2.MdiParent = this;
-            f2.Show();
-            f2.Dock = DockStyle.Fill;
+            
         }
         private void closeallforms()
         {
@@ -183,6 +180,14 @@ namespace LojaDiogo
         private void timer1_Tick(object sender, EventArgs e)
         {
             label1.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void novoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.MdiParent = this;
+            f2.Show();
+            f2.Dock = DockStyle.Fill;
         }
     }
 }
