@@ -189,5 +189,13 @@ namespace LojaDiogo
             f2.Show();
             f2.Dock = DockStyle.Fill;
         }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form5 f5 = new Form5();
+            f5.MdiParent = this;
+            f5.Show();
+            f5.Dock = DockStyle.Fill;
+        }
     }
 }
