@@ -197,5 +197,18 @@ namespace LojaDiogo
             f5.Show();
             f5.Dock = DockStyle.Fill;
         }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void registoDeAvariasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form6 f6 = new Form6();
+            f6.MdiParent = this;
+            f6.Show();
+            f6.Dock = DockStyle.Fill;
+        }
     }
 }
