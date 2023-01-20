@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.tools = new System.Windows.Forms.ToolStrip();
+            this.tsAdicionar = new System.Windows.Forms.ToolStripButton();
+            this.tsAnular = new System.Windows.Forms.ToolStripButton();
+            this.tsValidar = new System.Windows.Forms.ToolStripButton();
+            this.tsEliminar = new System.Windows.Forms.ToolStripButton();
+            this.tsGuardarSair = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtData = new System.Windows.Forms.DateTimePicker();
             this.grelha = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.chkGarantia = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.chkGarantia = new System.Windows.Forms.CheckBox();
             this.cbAvaria = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.status = new System.Windows.Forms.StatusStrip();
             this.statusMsg = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsAdicionar = new System.Windows.Forms.ToolStripButton();
-            this.tsAnular = new System.Windows.Forms.ToolStripButton();
-            this.tsValidar = new System.Windows.Forms.ToolStripButton();
-            this.tsEliminar = new System.Windows.Forms.ToolStripButton();
-            this.tsGuardarSair = new System.Windows.Forms.ToolStripButton();
             this.tools.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grelha)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -74,6 +74,51 @@
             this.tools.TabIndex = 0;
             this.tools.Text = "toolStrip1";
             this.tools.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
+            // 
+            // tsAdicionar
+            // 
+            this.tsAdicionar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsAdicionar.Image = global::LojaDiogo.Properties.Resources._303221911558424386_48;
+            this.tsAdicionar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsAdicionar.Name = "tsAdicionar";
+            this.tsAdicionar.Size = new System.Drawing.Size(34, 34);
+            this.tsAdicionar.Text = "toolStripButton1";
+            // 
+            // tsAnular
+            // 
+            this.tsAnular.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsAnular.Image = global::LojaDiogo.Properties.Resources._109625862716276583143772_128;
+            this.tsAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsAnular.Name = "tsAnular";
+            this.tsAnular.Size = new System.Drawing.Size(34, 34);
+            this.tsAnular.Text = "toolStripButton2";
+            // 
+            // tsValidar
+            // 
+            this.tsValidar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsValidar.Image = global::LojaDiogo.Properties.Resources.Yes_icon;
+            this.tsValidar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsValidar.Name = "tsValidar";
+            this.tsValidar.Size = new System.Drawing.Size(34, 34);
+            this.tsValidar.Text = "toolStripButton3";
+            // 
+            // tsEliminar
+            // 
+            this.tsEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsEliminar.Image = global::LojaDiogo.Properties.Resources.close_111152;
+            this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsEliminar.Name = "tsEliminar";
+            this.tsEliminar.Size = new System.Drawing.Size(34, 34);
+            this.tsEliminar.Text = "toolStripButton4";
+            // 
+            // tsGuardarSair
+            // 
+            this.tsGuardarSair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsGuardarSair.Image = global::LojaDiogo.Properties.Resources._18769148821543238916_48;
+            this.tsGuardarSair.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsGuardarSair.Name = "tsGuardarSair";
+            this.tsGuardarSair.Size = new System.Drawing.Size(34, 34);
+            this.tsGuardarSair.Text = "toolStripButton5";
             // 
             // label1
             // 
@@ -121,10 +166,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.chkGarantia);
             this.groupBox1.Controls.Add(this.cbAvaria);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.chkGarantia);
+            this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtTelefone);
             this.groupBox1.Controls.Add(this.label6);
@@ -139,62 +184,25 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CLIENTE";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(73, 71);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 31);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Nome:";
-            // 
-            // txtNome
-            // 
-            this.txtNome.Location = new System.Drawing.Point(173, 68);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(1072, 38);
-            this.txtNome.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 34);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 31);
-            this.label5.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(65, 149);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 31);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Contato:";
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Location = new System.Drawing.Point(189, 146);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(275, 38);
-            this.txtTelefone.TabIndex = 11;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(524, 149);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 31);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Email:";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // chkGarantia
             // 
-            this.chkGarantia.Location = new System.Drawing.Point(619, 146);
+            this.chkGarantia.AutoSize = true;
+            this.chkGarantia.Location = new System.Drawing.Point(1025, 223);
             this.chkGarantia.Name = "chkGarantia";
-            this.chkGarantia.Size = new System.Drawing.Size(626, 38);
-            this.chkGarantia.TabIndex = 13;
+            this.chkGarantia.Size = new System.Drawing.Size(137, 35);
+            this.chkGarantia.TabIndex = 16;
+            this.chkGarantia.Text = "Garantia";
+            this.chkGarantia.UseVisualStyleBackColor = true;
+            // 
+            // cbAvaria
+            // 
+            this.cbAvaria.FormattingEnabled = true;
+            this.cbAvaria.Location = new System.Drawing.Point(282, 221);
+            this.cbAvaria.Name = "cbAvaria";
+            this.cbAvaria.Size = new System.Drawing.Size(366, 39);
+            this.cbAvaria.TabIndex = 15;
             // 
             // label8
             // 
@@ -205,23 +213,61 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Descrição da avaria:";
             // 
-            // cbAvaria
+            // txtEmail
             // 
-            this.cbAvaria.FormattingEnabled = true;
-            this.cbAvaria.Location = new System.Drawing.Point(282, 221);
-            this.cbAvaria.Name = "cbAvaria";
-            this.cbAvaria.Size = new System.Drawing.Size(366, 39);
-            this.cbAvaria.TabIndex = 15;
+            this.txtEmail.Location = new System.Drawing.Point(619, 146);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(626, 38);
+            this.txtEmail.TabIndex = 13;
             // 
-            // checkBox1
+            // label7
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(1025, 223);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(137, 35);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Garantia";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(524, 149);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 31);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Email:";
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(189, 146);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(275, 38);
+            this.txtTelefone.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(65, 149);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 31);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Contato:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 34);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 31);
+            this.label5.TabIndex = 9;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(173, 68);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(1072, 38);
+            this.txtNome.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(73, 71);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 31);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Nome:";
             // 
             // status
             // 
@@ -239,51 +285,6 @@
             this.statusMsg.Size = new System.Drawing.Size(66, 17);
             this.statusMsg.Text = "Mensagem";
             // 
-            // tsAdicionar
-            // 
-            this.tsAdicionar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsAdicionar.Image = global::LojaDiogo.Properties.Resources._303221911558424386_48;
-            this.tsAdicionar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsAdicionar.Name = "tsAdicionar";
-            this.tsAdicionar.Size = new System.Drawing.Size(34, 34);
-            this.tsAdicionar.Text = "toolStripButton1";
-            // 
-            // tsAnular
-            // 
-            this.tsAnular.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsAnular.Image = global::LojaDiogo.Properties.Resources._109625862716276583143772_128;
-            this.tsAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsAnular.Name = "tsAnular";
-            this.tsAnular.Size = new System.Drawing.Size(34, 34);
-            this.tsAnular.Text = "toolStripButton2";
-            // 
-            // tsValidar
-            // 
-            this.tsValidar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsValidar.Image = global::LojaDiogo.Properties.Resources.Yes_icon;
-            this.tsValidar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsValidar.Name = "tsValidar";
-            this.tsValidar.Size = new System.Drawing.Size(34, 34);
-            this.tsValidar.Text = "toolStripButton3";
-            // 
-            // tsEliminar
-            // 
-            this.tsEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsEliminar.Image = global::LojaDiogo.Properties.Resources.close_111152;
-            this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(34, 34);
-            this.tsEliminar.Text = "toolStripButton4";
-            // 
-            // tsGuardarSair
-            // 
-            this.tsGuardarSair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsGuardarSair.Image = global::LojaDiogo.Properties.Resources._18769148821543238916_48;
-            this.tsGuardarSair.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsGuardarSair.Name = "tsGuardarSair";
-            this.tsGuardarSair.Size = new System.Drawing.Size(34, 34);
-            this.tsGuardarSair.Text = "toolStripButton5";
-            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,6 +301,7 @@
             this.MaximizeBox = false;
             this.Name = "Form6";
             this.Text = "Form6";
+            this.Load += new System.EventHandler(this.Form6_Load);
             this.tools.ResumeLayout(false);
             this.tools.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grelha)).EndInit();
@@ -326,10 +328,10 @@
         private System.Windows.Forms.DateTimePicker dtData;
         private System.Windows.Forms.DataGridView grelha;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chkGarantia;
         private System.Windows.Forms.ComboBox cbAvaria;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox chkGarantia;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Label label6;
