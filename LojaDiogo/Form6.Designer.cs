@@ -83,6 +83,7 @@
             this.tsAdicionar.Name = "tsAdicionar";
             this.tsAdicionar.Size = new System.Drawing.Size(34, 34);
             this.tsAdicionar.Text = "toolStripButton1";
+            this.tsAdicionar.Click += new System.EventHandler(this.tsAdicionar_Click);
             // 
             // tsAnular
             // 
@@ -92,6 +93,7 @@
             this.tsAnular.Name = "tsAnular";
             this.tsAnular.Size = new System.Drawing.Size(34, 34);
             this.tsAnular.Text = "toolStripButton2";
+            this.tsAnular.Click += new System.EventHandler(this.tsAnular_Click);
             // 
             // tsValidar
             // 
@@ -101,6 +103,7 @@
             this.tsValidar.Name = "tsValidar";
             this.tsValidar.Size = new System.Drawing.Size(34, 34);
             this.tsValidar.Text = "toolStripButton3";
+            this.tsValidar.Click += new System.EventHandler(this.tsValidar_Click);
             // 
             // tsEliminar
             // 
@@ -119,6 +122,7 @@
             this.tsGuardarSair.Name = "tsGuardarSair";
             this.tsGuardarSair.Size = new System.Drawing.Size(34, 34);
             this.tsGuardarSair.Text = "toolStripButton5";
+            this.tsGuardarSair.Click += new System.EventHandler(this.tsGuardarSair_Click);
             // 
             // label1
             // 
